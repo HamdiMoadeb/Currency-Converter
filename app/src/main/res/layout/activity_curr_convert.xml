@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".CurrConvertActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/euro"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="From"
+        android:textSize="25sp"
+        android:textColor="#5900FD"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:text="1"
+            android:textSize="25sp"
+            android:id="@+id/editnb"
+            android:layout_weight="20"/>
+
+        <com.scrounger.countrycurrencypicker.library.Buttons.CountryCurrencyButton
+            android:id="@+id/btnfrom"
+            android:layout_width="0dp"
+            android:layout_weight="80"
+            android:layout_height="50dp"
+            app:country_code="TN"
+            android:backgroundTint="#AEE7E0"
+            app:show_currency="true" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:text=" --> To"
+        android:textSize="25sp"
+        android:textColor="#5900FD"
+        android:layout_height="wrap_content"/>
+
+    <com.scrounger.countrycurrencypicker.library.Buttons.CountryCurrencyButton
+        android:id="@+id/btnto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:country_code="FR"
+        android:backgroundTint="#AEE7E0"
+        app:show_currency="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="Convert"
+        android:id="@+id/convertcurr"
+        android:backgroundTint="#5900FD"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textColor="#5900FD"
+        android:id="@+id/fromtext"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textColor="#5900FD"
+            android:id="@+id/totext"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>
